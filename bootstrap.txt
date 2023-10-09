@@ -1,0 +1,10 @@
+#!/bin/bash
+sudo su -
+apt-get update
+apt-get install apache2 git-core -y
+apt-get install php libapache2-mod-php -y
+apt install php-dev libmcrypt-dev php-pear -y
+pecl channel-update pecl.php.net
+pecl install mcrypt-1.0.6 -y
+apt-get install mysql-client -y
+sudo service apache2 restart
